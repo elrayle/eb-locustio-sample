@@ -1,7 +1,11 @@
 branch-defaults:
   master:
-    environment: eb-locustio-sample-dev
+    environment: locust-dev
     group_suffix: null
+environment-defaults:
+  locust-dev:
+    branch: null
+    repository: null
 global:
   application_name: eb-locustio-sample
   branch: null
