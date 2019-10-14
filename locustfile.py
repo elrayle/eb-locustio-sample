@@ -24,15 +24,15 @@ class MyTaskSet(TaskSet):
         self.client.get("/authority_list")
 
 # Staging targets
-   @task(100)
-   def concern1(self):
-       self.client.get("/authorities/search/linked_data/getty_aat_ld4l_cache/Activities?q=events&maxRecords=20")
-   @task(100)
-   def concern2(self):
-       self.client.get("/authorities/search/linked_data/locnames_rwo_ld4l_cache/person?q=Twain,%20Mark,%201835-1910&maxRecords=20&context=true")
-   @task(100)
-   def concern3(self):
-       self.client.get("/authorities/fetch/linked_data/oclcfast_ld4l_cache?uri=http%3A%2F%2Fid%2Eworldcat%2Eorg%2Ffast%2F1914919")
+    @task(100)
+    def concern1(self):
+        self.client.get("/authorities/search/linked_data/getty_aat_ld4l_cache/Activities?q=events&maxRecords=20")
+    @task(100)
+    def concern2(self):
+        self.client.get("/authorities/search/linked_data/locnames_rwo_ld4l_cache/person?q=Twain,%20Mark,%201835-1910&maxRecords=20&context=true")
+    @task(100)
+    def concern3(self):
+        self.client.get("/authorities/fetch/linked_data/oclcfast_ld4l_cache?uri=http%3A%2F%2Fid%2Eworldcat%2Eorg%2Ffast%2F1914919")
 
 # Production targets
 #    @task(1000)
