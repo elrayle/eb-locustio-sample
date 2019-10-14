@@ -20,18 +20,24 @@ class MyTaskSet(TaskSet):
 #    def index(self):
 #        self.client.get("/")
     @task(1000)
-    def search(self):
-        self.client.get("/catalog?locale=en&search_field=all_fields")
+    def authority_list(self):
+        self.client.get("/authority_list")
 
 # Staging targets
 #    @task(1000)
 #    def concern1(self):
-#        self.client.get("/concern/publications/5q47rn851?locale=en")
+#        self.client.get("/authorities/search/linked_data/getty_aat_ld4l_cache/Activities?q=events&maxRecords=20")
+#    @task(1000)
+#    def concern1(self):
+#        self.client.get("/authorities/search/linked_data/locnames_rwo_ld4l_cache/person?q=Twain,%20Mark,%201835-1910&maxRecords=20&context=true")
+#    @task(1000)
+#    def concern1(self):
+#        self.client.get("/authorities/fetch/linked_data/oclcfast_ld4l_cache?uri=http%3A%2F%2Fid%2Eworldcat%2Eorg%2Ffast%2F1914919")
 
 # Production targets
 #    @task(1000)
 #    def concern1(self):
-#        self.client.get("/concern/publications/3t945q76s?locale=en")
+#        self.client.get("/search/linked_data/locnames_rwo_ld4l_cache/person?q=Twain,%20Mark,%201835-1910&maxRecords=20&context=true")
 #    @task(1000)
 #    def concern2(self):
 #        self.client.get("/concern/publications/8336h188j?locale=en")
